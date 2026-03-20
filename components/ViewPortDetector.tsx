@@ -74,8 +74,8 @@ export const ViewPortDetector: React.FC<Props> = ({
   const view = useRef<View>(null);
   const { parentLayout } = useContext(ViewPortDetectorContext);
   const isFirstLayout = useRef(true);
-  const timeoutRef = useRef<NodeJS.Timeout>();
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<NodeJS.Timeout>(undefined);
+  const intervalRef = useRef<NodeJS.Timeout>(undefined);
   const isMounted = useRef(true);
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
 
